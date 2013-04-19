@@ -1,0 +1,2 @@
+Nokia/E71	zh_CN	ruyicai_E71.jar	ruyicai_E71.jad	-	320x240xnull
+

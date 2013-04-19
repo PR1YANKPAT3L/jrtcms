@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 12px;
+}
+-->
+</style></head>
+<script>
+function tableViwe()
+{
+	var typeSelect = document.getElementById("type");
+	var id = typeSelect.options[typeSelect.options.selectedIndex].value;
+
+	var Obj = document.getElementById("Table_"+id).style.display='block';
+	var noneObj = document.getElementById("Table_"+((Number(id)+1)%2)).style.display='none';
+}
+</script>
+<body>
+<select name="select">
+  <option value="0">选择频道</option>
+</select>
+<select name="select2">
+  <option value="0">选择分类</option>
+</select>
+<select name="select3">
+  <option value="0">默认模版</option>
+</select>
+<table width="900px" border="1">
+  <tr>
+    <td width="117" align="right"><p>文章标题：</p>    </td>
+    <td width="353"><input type="text" size="50" readonly="false" value="一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十"/>
+    <input name="textfield2" type="text" size="50" /></td>
+    <td width="408"><label><input type="checkbox" name="checkbox3" value="checkbox" />头条</label>
+      <select id="type" name="type" onchange="tableViwe()">
+      <option value="-1" selected="selected" >请选择类型...</option>
+      <option value="0" >引用</option>
+      <option value="1" >正文</option>
+    </select>
+      <select name="Tree_sequence_01">
+	  	<option value="-1">请选择排序...</option>
+        <option value="0">最低</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" >默认</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">最高</option>
+      </select></td>
+  </tr>
+  <tr>
+    <td align="right">文章关键字：</td>
+    <td><textarea name="textfield22" cols="50" rows="4"></textarea></td>
+    <td>关键字用于文章页面的网页关键字，也应用于文章与文章之间的相关联依据。多个关键字以空格隔开。</td>
+  </tr>
+  <tr>
+    <td colspan="3"><table id="Table_1" width="898px" border="1" style="display:none">
+      <tr>
+        <td width="85" align="right">作者：</td>
+        <td width="374"><input name="textfield23" type="text" size="10" value="自动" />　
+          　编辑：
+          <input name="textfield232" type="text" size="10" value="自动"/></td>
+        <td width="416">&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="right">上传图片：</td>
+        <td>
+          <input name="file" type="file" size="40" />        </td>
+        <td>上传列表图片，此图片会在首页、频道页或者分类页显示。</td>
+      </tr>
+      <tr>
+        <td align="right">文章内容：</td>
+        <td colspan="2" align="left"><textarea name="textarea" cols="100" rows="10">此处内容需要使用js编辑器</textarea></td>
+        </tr>
+    </table>
+      <table id="Table_0"  style="display:none" width="898px" border="1">
+
+        <tr>
+          <td width="85">引用地址：</td>
+          <td width="374"><input name="textfield24" type="text" size="50" /></td>
+          <td width="416">（http://xxx.xxx.xxx）</td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<table  width="898px" border="0" cellspacing="0">
+
+        <tr>
+          <td width="52">&nbsp;</td>
+          <td width="393" align="right"><input name="button2" type="button" value="保存新闻-等待审批"/></td>
+          <td width="431"><input name="button22" type="button" value="取消返回"/></td>
+        </tr>
+</table>
+</body>
+
+</html>

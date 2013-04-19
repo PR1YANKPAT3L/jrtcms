@@ -1,0 +1,2 @@
+Sony-Ericsson/K790	zh_CN	ruyicai_K790.jar	ruyicai_K790.jad	-	240x320x18
+

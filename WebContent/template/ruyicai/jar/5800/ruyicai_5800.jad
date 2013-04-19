@@ -1,0 +1,12 @@
+MIDlet-Name: 如意彩
+MIDlet-Version: 2.0.0
+MIDlet-Vendor: JinRuanTong
+MIDlet-Jar-URL: ruyicai_5800.jar
+MIDlet-Jar-Size: 841257
+MIDlet-Description: 如意彩;App;Nokia 5800
+MIDlet-Icon: /icon.png
+MIDlet-1: 如意彩,/icon.png,com.iApp
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0
+Nokia-MIDlet-App-Orientation: portrait
+Nokia-MIDlet-On-Screen-Keypad: no

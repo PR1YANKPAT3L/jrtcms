@@ -1,0 +1,46 @@
+<link href="/css/util.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/jqueryJS/formValidator.js" ></script>
+<script type="text/javascript" src="/js/jqueryJS/formValidatorRegex.js"></script>
+<script type="text/javascript" src="/js/jqueryJS/formValidator_min.js"></script>
+<script type="text/javascript" src="/js/ruserAll.js"></script>
+<script type="text/javascript" src="/js/util.js"></script>
+<script type="text/javascript" src="/js/public_touZhu.js"></script>
+
+<div id="body">
+
+<div id="login_pop">
+<form method="post" id="userLoginForm">
+	<div class="pop_header">
+		<div class="pop_header_zi">用户登录</div>
+		<div class="pop_header_btn"><a href="javaScript:closeAjaxLogin('openLoginAjax');" title="关闭"><img src="/images/guanbi.gif" alt="关闭"  border="0"/></a></div>
+	</div>
+	<div class="pop_content">
+		<div class="pop_con">
+			<ul>
+			<li><div class="pop_tishi" id="msg" style="display:none;"></div></li>
+				<li>用户名：<input class="pop_input" name="tuserinfo.USERNAME"  id="username" tabindex="1" type="text"  onfocus="change('magLogin')"/>
+				<a href="http://users.ruyicai.com/register/register_new.jsp" title="免费注册"><span class="blue">免费注册</span></a>
+				<input style="display: none;" type="text"/>
+				</li>
+				<li>密　码：<input class="pop_input" name="tuserinfo.PASSWORD" id="pwd" tabindex="2"  type="password" onKeyDown="if (event.keyCode==13)loginAjax(1);"/>
+				<a href="/rules/findPwd_new.html"  title="忘记密码"><span class="blue">忘记密码</span></a>
+				<input style="display: none;" type="text"/>
+				</li>
+			   <li id="rank_id" style="display: none">验证码：<input class="pop_input1" tabindex="3"  id="password1" name="password1" type="text" onKeyDown="if (event.keyCode==13)loginAjax(1);"/>
+			   <img  id="magLogin" src="/chlw/function/common/image.jsp" alt="验证码" /><a href="javascript:change('magLogin')" title="看不清，换一张"><span class="blue1">刷新</span></a></li>
+			</ul>
+	  </div>
+	  <input type="hidden"  value="0" id="rank_value" name="rank_value">
+	  
+		<div class="loginc"><input class="loginbtn1" name="Input" type="button"   onclick="loginAjax(1)"/></div>
+		<input style="display: none;" type="text"/>
+	</div>
+	</form>
+</div>
+ 
+
+</div>
+
+<script>
+$("#msg").text($("#tishi").val());
+ </script>

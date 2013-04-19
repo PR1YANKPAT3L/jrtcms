@@ -1,0 +1,9 @@
+http://219.148.162.70/jrtLot/attemper.do?method="attemperRequest"&jsonString="JSON Object对象"
+accesstype  =  B
+mobile_code  =  
+cardType  =  01
+transaction_money = 单位（分）
+card_no  =  为null
+bankId  =  um0001
+expand  =  orderId
+sessionid = 登录返回的sessionid

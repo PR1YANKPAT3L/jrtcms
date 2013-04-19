@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mobilephonePic>
+<brand id="android">
+<data product="HTC MagicG2" img="../img/android/androidHTC MagicG2.png" title="HTC MagicG2" url="../jar/android/RuyicaiAndroid_320480.apk" />
+<data product="HTC Hero(G3)" img="../img/android/androidHTC Hero(G3).png" title="HTC Hero(G3)" url="../jar/android/RuyicaiAndroid_320480.apk" />
+<data product="HTC Espresso" img="../img/android/androidHTC Espresso.png" title="HTC Espresso" url="../jar/android/RuyicaiAndroid_320480.apk" />
+<data product="HTC Droid Eris" img="../img/android/androidHTC Droid Eris.png" title="HTC Droid Eris" url="../jar/android/RuyicaiAndroid_320480.apk" />
+<data product="HTC Legend(G6)" img="../img/android/androidHTC Legend(G6).png" title="HTC Legend(G6)" url="jar/android/RuyicaiAndroid_320480.apk" />
+<data product="DOPOD A6288" img="../img/android/androidDOPOD A6288.png" title="多普达 A6288" url="jar/android/RuyicaiAndroid_320480.apk" />
+<data product="SamSung i899" img="../img/android/androidSamSung i899.png" title="SamSung i899" url="jar/android/RuyicaiAndroid_320480.apk" />
+<data product="SamSung i7500U" img="../img/android/androidSamSung i7500U.png" title="SamSung i7500U" url="jar/android/RuyicaiAndroid_320480.apk" />
+<data product="SamSung I6500U" img="../img/android/androidSamSung I6500U.png" title="SamSung I6500U" url="jar/android/RuyicaiAndroid_320480.apk" />
+<data product="SamSung i5700(Spica)" img="../img/android/androidSamSung i5700(Spica).png" title="SamSung i5700(Spica)" url="jar/android/RuyicaiAndroid_320480.apk" />
+<data product="SamSung M910" img="../img/android/androidSamSung M910.png" title="SamSung M910" url="jar/android/RuyicaiAndroid_320480.apk" />
+<data product="LG GW620" img="../img/android/androidLG GW620.png" title="LG GW620" url="jar/android/RuyicaiAndroid_320480.apk" />
+<data product="MOTO ME501" img="../img/android/androidMOTO ME501.png" title="MOTO ME501" url="jar/android/RuyicaiAndroid_320480.apk" />
+<data product="MOTO ME600" img="../img/android/androidMOTO ME600.png" title="MOTO ME600" url="jar/android/RuyicaiAndroid_320480.apk" />
+<data product="HUAWEI U8220" img="../img/android/androidHUAWEI U8220.png" title="华为 U8220" url="jar/android/RuyicaiAndroid_320480.apk" />
+<data product="SHOUPAI A60" img="../img/android/androidSHOUPAI A60.png" title="首派 A60" url="jar/android/RuyicaiAndroid_320480.apk" />
+<data product="HUAWEI C8600" img="../img/android/androidHUAWEI C8600.png" title="华为 C8600" url="jar/android/RuyicaiAndroid_320480.apk" />
+
+
+<data product="Google Nexus One" img="../img/android/androidGoogle Nexus One.png" title="谷歌 Nexus One" url="jar/android/RuyicaiAndroid_480800.apk" />
+<data product="SamSung GT-i9000" img="../img/android/androidSamSung GT-i9000.png" title="SamSung GT-i9000" url="jar/android/RuyicaiAndroid_480800.apk" />
+<data product="MOTO XT800" img="../img/android/androidMOTO XT800.png" title="MOTO XT800" url="jar/android/RuyicaiAndroid_480800.apk" />
+
+<data product="AIGO E700" img="../img/android/androidAIGO E700.png" title="爱国者e700" url="jar/android/RuyicaiAndroid_800480.apk" />
+</brand>
+</mobilephonePic>

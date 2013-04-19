@@ -1,0 +1,10 @@
+MIDlet-Name: 如意彩
+MIDlet-Version: 2.0.0
+MIDlet-Vendor: JinRuanTong
+MIDlet-Jar-URL: ruyicai_M600.jar
+MIDlet-Jar-Size: 441986
+MIDlet-Description: 如意彩;App;SEW958C
+MIDlet-Icon: /icon.png
+MIDlet-1: 如意彩,/icon.png,com.iApp
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0

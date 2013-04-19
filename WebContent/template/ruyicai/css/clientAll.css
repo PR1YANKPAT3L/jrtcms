@@ -1,0 +1,87 @@
+@charset "utf-8";
+/*
+#client_title{width:935px; height:29; margin:0 auto; padding-left:13px; background:url(../images/title_bg.gif) repeat-x; height:29px; border:1px solid #dbdbdb; border-top:none; line-height:29px;  }
+.client_left{ float:left; border:1px solid #dbdbdb; width:668px; height:auto;}
+.client_right{float:right;  width:270px;height:auto;}
+.client_top{width:655px; height:28px;padding-left:13px; background:url(../images/index_topbg.gif) repeat-x; border-bottom:1px solid #dbdbdb; font-size:14px; color:#de0201;font-weight:bold; line-height:28px;}
+.client_way1{ padding:10px 20px;}
+.client_fileFormat{ color:#DE0201; padding-left:10px; font-size:14px; font-weight:bold;}
+.client_way1 p{ padding:10px 0;}
+.client_way1 strong{ font-weight:bold;}
+.selict_pp{ width:600px; overflow:hidden; margin-bottom:10px;}
+.selict_xuan{ width:185px; height:auto; float:left;}
+.selict_xuanhtc{width:150px; height:150px; padding:10px; margin-left:30px; border:1px solid #bfdcff; background:#ebf4f3; float:left; text-align:center; }
+.selict_top{ width:130px; color:#de0201; line-height:28px;}
+.selict_tu{ width:150px; height:115px; padding-top:10px; background:#fff;}
+.selict_zi{ line-height:25px;}
+.client_tishi{ width:628px; height:auto; border-bottom:1px dotted #b5b5b5; line-height:21px;}
+.client_tishi1{ width:628px; height:auto;  line-height:21px;}
+.cliect_pinpai{width:628px; overflow:hidden;}
+.cliect_pinpai span{ float:left; }
+.fanhui{line-height:40px; margin-left:30px;}
+.xinghao a{ color:#004985; text-decoration:underline; line-height:22px; margin-left:3px;}
+
+.cliect_gongneng{width:268px; height:auto; border:1px solid #dbdbdb; margin-bottom:10px; }
+.cliect_biaotou{ height:28px;padding-left:13px; background:url(../images/index_topbg.gif) repeat-x; border-bottom:1px solid #dbdbdb; font-size:14px; color:#de0201;font-weight:bold; line-height:28px;}
+.cliect_content1{width:253px; height:245px; padding:10px; padding-right:5px; background:url(../images/xiazai_bg1.gif) repeat-x;border-bottom:1px dotted #dbdbdb; overflow:hidden;}
+.cliect_pic{ float:left;}
+.cliect_news{ width:185px; float:right;}
+.jixing{ background:url(../images/jianbian.gif) no-repeat left bottom; font-size:14px; color:#de0201; font-weight:bold; line-height:25px;}
+.cliect_zi{ line-height:21px; padding-top:10px;}
+.cliect_content2{width:253px; height:146px; padding:10px; padding-right:5px; background:url(../images/xiazai_bg3.gif) repeat-x; overflow:hidden;}
+.cliect_tedian{ padding:10px; overflow:hidden;}
+.cliect_feature{ float:left;}
+.cliect_note{width:90px; padding-top:60px; text-align:center; float:right;line-height: 20px; }
+.cliect_biaoti{ font-weight:bold; font-size:14px; line-height: 20px;}
+.cliect_help{ padding:10px; height:249px; overflow:hidden;}
+.cliect_help ul{ display:block;}
+.cliect_help li{ background:url(../images/landian.gif) no-repeat left center; padding-left:6px; margin-left:5px; line-height:25px;}
+.cliect_help a:hover{ color:#de0201; text-decoration:underline;}
+.cliect_logo{ width:94px; height:47px; background:url(../images/kehuduan.gif) no-repeat; border:0;}
+.logo_nokia{ background:url(../images/kehuduan.gif) no-repeat 0px 0px;}
+.logo_sansung{background:url(../images/kehuduan.gif) no-repeat 0px -50px;}
+.logo_htc{background:url(../images/kehuduan.gif) no-repeat 0px -100px;}
+.logo_apple{background:url(../images/kehuduan.gif) no-repeat 0px -150px;}
+.logo_lg{background:url(../images/kehuduan.gif) no-repeat 0px -200px;}
+.logo_moto{background:url(../images/kehuduan.gif) no-repeat 0px -250px;}
+.logo_sonyericsson{background:url(../images/kehuduan.gif) no-repeat 0px -300px;}
+.logo_huawei{background:url(../images/kehuduan.gif) no-repeat 0px -350px;}
+.logo_acer{background:url(../images/kehuduan.gif) no-repeat 0px -400px;}
+.logo_lenovo{background:url(../images/kehuduan.gif) no-repeat 0px -450px;}
+.logo_other{background:url(../images/kehuduan.gif) no-repeat 0px -500px;}
+*/
+
+
+/* CSS Document */
+/*html { filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1); }*/
+html, body, div, span, applet, object, iframe, table, caption, tbody, tfoot, thead, tr, th, td, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, dl, dt, dd, ol, ul, li, fieldset, form, label, legend { vertical-align: baseline; font-family: inherit; font-weight: inherit; font-style: inherit; outline: 0; padding: 0; margin: 0; border: 0; }
+ol, ul, li { list-style: none; }
+.clear { content: "."; height:0px; line-height:0px; overflow:hidden; display:none; visibility:hidden; clear:both }
+/*CSS-REST*/
+
+.download_repeat_bg{background:url(/images/repeat-x.png) repeat-x; height:597px}
+.download_contant{width:950px; margin:0 auto; height:597px}
+.download_menu{height:64px}
+	.download_menu ul{overflow:hidden}
+	.download_menu li{float:left; margin-right:22px}
+
+.dl_android{background:url(/images/Android_bg.jpg) no-repeat; height:533px; position:relative; z-index:10}
+	.dl_android_flash{position:absolute; z-index:99; width: 166px; height: 300px; left: 760px; top: 120px; overflow:hidden}
+
+.dl_apple{background:url(/images/apple_bg.jpg) no-repeat; height:533px; position:relative; z-index:10}
+	.dl_apple_flash{ position:absolute; z-index:99; width: 188px; height: 282px; left: 726px; top: 122px; overflow:hidden }
+	
+.dl_symbian{background:url(/images/symbian_bg.jpg) no-repeat; height:533px; position:relative; z-index:10}
+	.dl_symbian_flash{ position:absolute; z-index:99; width: 176px; height: 306px; left: 740px; top: 92px; overflow:hidden }
+	
+.dl_kjava{background:url(/images/kjava_bg.jpg) no-repeat; height:533px; position:relative; z-index:10}
+	.dl_kjava_flash{position:absolute; z-index:99; width: 166px; height: 300px; left: 760px; top: 120px; overflow:hidden}
+
+.download_ff2{width:950px; margin:0 auto; overflow:hidden}
+	.download_ff2 h1{font-size:16px; font-weight:bold; color:#C00; font-family:"微软雅黑", "黑体"; line-height:36px}
+	.download_ff2 p{line-height:25px; font-size:12px; width:700px}
+	.download_ff2 strong{font-weight:bold}
+
+.dl_downbtn1{position:absolute; z-index:99; width: 263px; height: 77px; left: 2px; top: 226px;}
+.dl_versiontxt{position:absolute; z-index:99; width: 263px; height: 130px; left: 2px; top: 320px; line-height:20px; font-size:12px; font-family:Verdana, Geneva, sans-serif}
+

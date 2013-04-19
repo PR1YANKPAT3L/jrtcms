@@ -1,0 +1,10 @@
+MIDlet-Name: 如意彩
+MIDlet-Version: 2.0.0
+MIDlet-Vendor: JingRuanTong
+MIDlet-Jar-URL: ruyicai_SGH-I900.jar
+MIDlet-Jar-Size: 443168
+MIDlet-Description: 如意彩;App;Samsung SGH-I900
+MIDlet-Icon: /icon.png
+MIDlet-1: 如意彩,/icon.png,com.iApp
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0

@@ -1,0 +1,10 @@
+MIDlet-Name: 如意彩
+MIDlet-Version: 2.0.0
+MIDlet-Vendor: JinRuanTong
+MIDlet-Jar-URL: ruyicai_E71.jar
+MIDlet-Jar-Size: 449262
+MIDlet-Description: 如意彩;App;Nokia E71
+MIDlet-Icon: /icon.png
+MIDlet-1: 如意彩,/icon.png,com.iApp
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0

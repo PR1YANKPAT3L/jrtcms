@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>如意彩-登录</title>
+<link type="text/css" href="/css/util.css" rel="stylesheet"/>
+<link type="text/css" href="/css/ruserAll.css" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" href="/css/ymPrompt.css" />
+<script type="text/javascript" src="/js/jqueryJS/jquery-1.5.min.js" ></script>
+<script type="text/javascript" src="/js/ymPrompt_source.js"></script>
+<script type="text/javascript" src="/js/ruserAll.js"></script>
+<script type="text/javascript" src="/js/util.js"></script>
+</head>
+<body>
+<h1>操作提示：先通过测试按钮获取加密秘钥，然后通过登陆按钮进行模仿登陆操作！</h1>
+<hr></hr>
+<form action="/chlw/cooperation/channel!joinLogin" id="ceshi" >
+<input type="text" name = "username" value="xiaona02"  id = "username"/> 
+<input type="password" name = "password" value="xiaona"  id = "password"/>
+<input type="hidden" name = "channelnum" value="B00031"/> 
+<input type="hidden" name = "sendtime" value="1316396070492" id="sendtime"/> 
+<input type="hidden" name = "encrypNum" value="" id="encrypNum"/> 
+<input type="button" value="测试" onclick="md5aa();"/>
+<input type="submit" value="登陆"/>
+</form>
+
+<script>
+var date = new Date();
+$("#sendtime").val(date.getTime());
+function md5aa(){
+	var params=$('#ceshi').serialize();
+	$.ajax({
+		url	: '/chlw/cooperation/channel!getNum',
+		type:"POST",//数据发送方式
+		data:params,//参数
+		dataType:'text',//接受数据格式
+		async: false, 
+		success:function(json){
+			$("#encrypNum").val(json);
+		}
+	});
+	
+}
+</script>
+<!--#include virtual="/rules/setBody.html"-->

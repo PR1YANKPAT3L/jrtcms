@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans   
+            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd  
+            http://www.springframework.org/schema/context  
+            http://www.springframework.org/schema/context/spring-context-2.5.xsd  
+            http://www.springframework.org/schema/aop  
+            http://www.springframework.org/schema/aop/spring-aop-2.5.xsd  
+            http://www.springframework.org/schema/tx  
+            http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	
+	<!-- ===================================每天定时删除开奖信息开始========================================== -->
+	<bean id="clearLottery" class="util.ClearLottery_Job">
+	<property name="cp_drawalotteryService" ref="cp_drawalotteryService"></property>
+	</bean>
+	
+	<bean id="clearLotterytask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">            
+		  <property name="targetObject">     
+		              <ref bean="clearLottery"/>       
+		  </property>            
+	      <property name="targetMethod">    
+	                   <value>clearLotteryMember</value>  
+	      </property>  
+	  </bean> 
+	 
+	  <bean id="doTime" class="org.springframework.scheduling.quartz.CronTriggerBean">      
+		         <property name="jobDetail">               
+		           <ref bean="clearLotterytask"/>          
+		         </property>          
+	         	 <property name="cronExpression">       
+	           		 <value>0 0 23 * * ?</value> 
+	          	 </property>      
+	  </bean> 
+	  <bean lazy-init="false" autowire="no" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+	               <property name="triggers">        
+			           <list>                 
+			              	 <ref bean="doTime"/> 
+			           </list>            
+	               </property>         
+	  </bean>
+<!-- ===================================每天定时删除开奖信息 结束========================================== -->
+</beans>

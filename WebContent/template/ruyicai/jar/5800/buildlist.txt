@@ -1,0 +1,4 @@
+Nokia/5800	zh_CN	ruyicai_5800.jar	ruyicai_5800.jad	-	176x208xnull
+
+Nokia/5800	zh_CN	ruyicai_5800.jar	ruyicai_5800.jad	-	176x208xnull
+

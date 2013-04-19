@@ -1,0 +1,10 @@
+MIDlet-1: 如意彩简版,/icon.png,com.ruyicai.midlet.MidletApp
+MIDlet-Description: 如意彩简版
+MIDlet-Icon: /icon.png
+MIDlet-Jar-Size: 108611
+MIDlet-Jar-URL: Ruyicai_jian2nd.jar
+MIDlet-Name: 如意彩简版
+MIDlet-Vendor: JRRC
+MIDlet-Version: 2.0.0
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0

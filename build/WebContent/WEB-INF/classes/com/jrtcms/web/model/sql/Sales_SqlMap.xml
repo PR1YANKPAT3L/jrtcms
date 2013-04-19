@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="Sales">
+	<resultMap class="com.jrtcms.web.pojo.Sales" id="Sales">
+		<!--系统管理员 映射 -->
+		<result column="userno" jdbcType="CHAR" property="userNo" />
+		<result column="username" jdbcType="VARCHAR" property="userName" />
+		<result column="cretime" jdbcType="TIMESTAMP" property="creTime" />
+		<result column="amt" jdbcType="BIGINT" property="amt" />
+		<result column="lotNo" jdbcType="VARCHAR" property="lotNo" />
+		<result column="wanfa" jdbcType="VARCHAR" property="wanfa" />
+		<result column="memo" jdbcType="VARCHAR" property="memo" />
+	</resultMap>
+	
+	
+	<insert id="insertSales" parameterClass="com.jrtcms.web.pojo.Sales">
+		INSERT INTO cp_sales(userno, username, cretime, amt, lotno, wanfa,memo)
+		VALUES(	#userNo#, #userName#, now(), #amt#, #lotNo#, #wanfa#,#memo#)
+	</insert>
+</sqlMap>

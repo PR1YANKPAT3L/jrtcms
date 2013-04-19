@@ -1,0 +1,2 @@
+Sony-Ericsson/W950i	zh_CN	ruyicai_M600.jar	ruyicai_M600.jad	"SonyEricssonW950i","SonyEricssonW950i/R100 Mozilla/4.0 (compatible; MSIE 6.0; Symbian OS; 276) Opera 8.60 [fr]1"	240x320x18
+

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+ <struts>    
+	<package name="web" namespace="/web" extends="struts-default">
+	<global-results>
+		<result name="msg">/msg.jsp</result>
+	</global-results>
+	<!-- struts2.0的局部跳转 -->
+	<!-- 首页跳转 -->
+	    <action name="news" class="news">
+		   <result name="list">/news/right_list.jsp</result>
+		   <result name="add">/news/right_add.jsp</result>
+		   <result name="edit">/news/right_edit.jsp</result>
+		   <result name="newsinfo" type="redirect">
+				/web/newsSearch!getSearchListNews
+			</result>
+		</action>
+		<action name="newsSearch" class="newsSearch">
+		   <result name="list">/news/right_list.jsp</result>
+		   <result name="add">/news/right_add.jsp</result>
+		   <result name="edit">/news/right_edit.jsp</result>
+		</action>
+	    <action name="newsCategory" class="newsCategory">
+		   <result name="index">/category/right_category.jsp</result>
+		</action>
+	    <action name="newsChannel" class="newsChannel">
+		   <result name="newsChannelList">/channel/right_channel_list.jsp</result>
+		</action>
+		<action name="admin" class="admin">
+		   <result name="index">/main.html</result>
+		   <result name="login">/login.jsp</result>
+		</action>
+		<action name="phoneInfo" class="phoneInfo">
+		   <result name="index">/main.html</result>
+		   <result name="login">/login.jsp</result>
+		</action>
+		<action name="newsInfo" class="newsInfo">
+		   <result name="index">/main.html</result>
+		   <result name="newsinfolist">/news/right_news_list.jsp</result>
+			<result name="editSuccess">/news/right_news_edit.jsp</result>
+			<result name="editnewsinfo" type="chain">
+				<param name="namespace">/web</param>
+				<param name="actionName">newsInfo</param>
+				<param name="method">getNewsInfoList</param>
+			</result>
+			<result name="channelList">/news/right_news_add.jsp</result>
+			<result name="insertnewsinfo" type="chain">
+				<param name="namespace">/web</param>
+				<param name="actionName">newsInfo</param>
+				<param name="method">getNewsInfoList</param>
+			</result>
+			<result name="news">/template/news.jsp</result>
+		</action>
+		<action name="newsTemplate" class="newsTemplate">
+		   <result name="upload">/jspToHtmlupload.jsp</result>
+		     <!-- 限制上传的文件的大小，在struts-default.xml中我们可能找到一个fileUpload拦截器 -->
+			   <interceptor-ref name="fileUpload">
+			    <!-- 单位为字节，这里为400MB 这里的大小是指每个文件上传的大小，若多个文件上传指每一个文件的大小 -->
+			    <param name="maximumSize">409600000</param>
+			   </interceptor-ref>
+			   <!-- 加上默认拦截器 -->
+			   <interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		<action name="tools" class="tools">
+		   <result name="index">/index.jsp</result>
+		</action>
+		<action name="webPro" class="webPro">
+			<result name="index">/index.jsp</result>
+		</action>
+		<action name="webProCopy" class="webProCopy">
+			<result name="index">/index.jsp</result>
+		</action>
+		<!-- 开奖抓取action -->
+		<action name="htmlCodeAction" class="htmlCodeAction">
+			<result name="htmlCode">/htmlCordeTest.jsp</result>
+		</action>
+		  <action name="list" class="com.jrtcms.web.action.DisplayAction">  
+                     <result name="list2">/list.jsp</result>  
+          </action>  
+       <!-- 客户留言的action -->
+       <action name="customSearch" class="customSearch">
+	   <result name="list">/customMessage/right_list.jsp</result>
+	   <result name="customMdInfo">/customMessage/right_customInfo.jsp</result>
+	   </action>
+	   
+        <action name="phraseLibrary" class="phraseLibrary">
+		   <result name="selphrase">/phraseLibrary/right_phrase_list.jsp</result>
+		</action>
+	</package>
+		<package name="WebInterface" namespace="/WebInterface" extends="struts-default">
+			<action name="Interface" class="Interface" />
+			<action name="activity" class="activity" />
+		</package>
+		<!-- 外部访问接口，无需登录 -->
+		<package name="WebWithoutLogin" namespace="/WebWithoutLogin" extends="struts-default">
+			<action name="tools" class="tools"></action>
+		</package>
+</struts>

@@ -1,0 +1,2 @@
+Nokia/7370	zh_CN	ruyicai_N7370.jar	ruyicai_N7370.jad	"Nokia7370","Nokia7370/2.0 (03.51) Profile/MIDP-2.0 Configuration/CLDC-1.1"	240x320x18
+

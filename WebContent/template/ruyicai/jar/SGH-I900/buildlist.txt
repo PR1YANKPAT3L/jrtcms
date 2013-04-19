@@ -1,0 +1,2 @@
+Samsung/SGH-I900	zh_CN	ruyicai_SGH-I900.jar	ruyicai_SGH-I900.jad	"SAMSUNG-SGH-i900/1.0 Opera 9.5"	nullxnull
+

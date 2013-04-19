@@ -1,0 +1,127 @@
+<!--#include virtual="/include/top_http.html"-->
+<html>
+<head>
+<title>开奖查询-如意彩</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">    
+<meta http-equiv="keywords" content="如意彩、彩票投注管理、账户管理、彩票赠送管理">
+<meta http-equiv="description" content="彩票投注管理、账户管理、彩票赠送管理">
+
+<!--<link href="/css/css.css" rel="stylesheet" type="text/css" />
+<link href="/css/user.css" rel="stylesheet" type="text/css" />
+<link href="/css/userleft.css" rel="stylesheet" type="text/css" />
+<link href="/css/award.css" rel="stylesheet" type="text/css" />
+<link href="/css/login.css" rel="stylesheet" type="text/css" />-->
+<link href="/css/util.css" rel="stylesheet" type="text/css" />
+<link href="/css/newsAll.css" rel="stylesheet" type="text/css" />
+<link href="/css/tuserAll.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="/chlw/function/images/biao-ico.ico"  type="image/x-icon" />
+
+<script type="text/javascript" src="/js/jqueryJS/jquery-1.5.min.js"></script>
+<script type="text/javascript" src="/js/util.js"></script>
+<script type="text/javascript" src="/js/tuserAll.js"></script>
+
+</head>
+<body >
+<div id="body">
+   <!--#include virtual="/include/top.html"-->
+  <div id="main1">
+  	<div class="main_left">
+		<div class="chxun">
+			<div class="chxun1">
+				<ul>
+					<li><a href="javascript:;" id="nav_1" onclick="toggle_nav(1,'shijian','fenlei',2)" title="按分类查询" class="fenlei">按分类查询</a></li>	
+					<li><a href="javascript:;" id="nav_2" onclick="toggle_nav(2,'shijian','fenlei',2)" title="按时间查询" class="shijian">按时间查询</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="PARENT">
+		<!-- 按分类查询 -->
+	    <div id="sub_nav_0" style="display:none;"></div>
+		<!-- 充值导航 -->
+		<div id="sub_nav_1" style="display:block;">
+		<ul id="daohang">
+			<li><a href="#Menu=ChildMenu1" onclick="DoMenu('ChildMenu1')">福利彩票</a>
+				  <ul id="ChildMenu1" class="collapsed">
+				   <li><a href="javascript:;" onclick="reHtml(28,'lotno=F47104')" id="ssq" title="双色球">双色球</a></li>
+				   <li><a href="javascript:;" onclick="reHtml(28,'lotno=F47103')" id="sd" title="福彩3D">福彩3D</a></li>
+				   <li><a href="javascript:;" onclick="reHtml(28,'lotno=F47102')" id="qlc" title="七乐彩">七乐彩</a></li>
+				  </ul>
+			 </li>
+			 <li><a href="#Menu=ChildMenu2" onclick="DoMenu('ChildMenu2')">体育彩票</a>
+				  <ul id="ChildMenu2" class="collapsed">
+				   <li><a href="javascript:;" onclick="reHtml(28,'lotno=T01001')" id="dlt" title="超级大乐透">超级大乐透</a></li>
+				   <li><a href="javascript:;" onclick="reHtml(28,'lotno=T01002')" id="pls" title="排列三">排列三</a></li>
+				  </ul>
+			 </li>
+		</ul>
+		</div>
+		<!-- 按时间查询 -->
+		<div id="sub_nav_2" style="display:none;">
+		<ul id="daohang">
+		 <li><a href="#Menu=ChildMenu3" onclick="DoMenu('ChildMenu3')">星期一</a>
+			  <ul id="ChildMenu3" class="collapsed">
+			   <li><a href="javascript:;" onclick="reHtml(28,'lotno=T01001')">超级大乐透</a></li>
+			   <li><a href="javascript:;" onclick="reHtml(28,'lotno=F47103')">福彩3D</a></li>
+			   <li><a href="javascript:;" onclick="reHtml(28,'lotno=F47102')">七乐彩</a></li>
+			   <li><a href="javascript:;" onclick="reHtml(28,'lotno=T01002')">排列三</a></li>
+			  </ul>
+		 </li>
+		 <li><a href="#Menu=ChildMenu4" onclick="DoMenu('ChildMenu4')">星期二</a>
+			  <ul id="ChildMenu4" class="collapsed">
+			   <li><a href="javascript:;" onclick="reHtml(28,'lotno=F47104')">双色球</a></li>
+			   <li><a href="javascript:;" onclick="reHtml(28,'lotno=F47103')">福彩3D</a></li>
+			   <li><a href="javascript:;" onclick="reHtml(28,'lotno=T01002')">排列三</a></li>
+			  </ul>
+		 </li>
+		 <li><a href="#Menu=ChildMenu5" onclick="DoMenu('ChildMenu5')">星期三</a>
+			  <ul id="ChildMenu5" class="collapsed">
+			   <li><a href="javascript:;" onclick="reHtml(28,'lotno=T01001')">超级大乐透</a></li>
+			   <li><a href="javascript:;" onclick="reHtml(28,'lotno=F47103')">福彩3D</a></li>
+			   <li><a href="javascript:;" onclick="reHtml(28,'lotno=F47102')">七乐彩</a></li>
+			   <li><a href="javascript:;" onclick="reHtml(28,'lotno=T01002')">排列三</a></li>
+			  </ul>
+		 </li>
+		 <li><a href="#Menu=ChildMenu6" onclick="DoMenu('ChildMenu6')">星期四</a>
+			  <ul id="ChildMenu6" class="collapsed">
+			   <li><a href="javascript:;" onclick="reHtml(28,'lotno=F47104')">双色球</a></li>
+			   <li><a href="javascript:;" onclick="reHtml(28,'lotno=F47103')">福彩3D</a></li>
+			   <li><a href="javascript:;" onclick="reHtml(28,'lotno=T01002')">排列三</a></li>
+			  </ul>
+		 </li>
+		 <li><a href="#Menu=ChildMenu7" onclick="DoMenu('ChildMenu7')">星期五</a>
+			  <ul id="ChildMenu7" class="collapsed">
+			   <li><a href="javascript:;" onclick="reHtml(28,'lotno=F47102')">七乐彩</a></li>
+			   <li><a href="javascript:;" onclick="reHtml(28,'lotno=F47103')">福彩3D</a></li>
+			   <li><a href="javascript:;" onclick="reHtml(28,'lotno=T01002')">排列三</a></li>
+			  </ul>
+		 </li>
+		  <li><a href="#Menu=ChildMenu8" onclick="DoMenu('ChildMenu8')">星期六</a>
+			  <ul id="ChildMenu8" class="collapsed">
+			   <li><a href="javascript:;" onclick="reHtml(28,'lotno=T01001')">超级大乐透</a></li>
+			   <li><a href="javascript:;" onclick="reHtml(28,'lotno=F47103')">福彩3D</a></li>
+			   <li><a href="javascript:;" onclick="reHtml(28,'lotno=T01002')">排列三</a></li>
+			  </ul>
+		 </li>
+		  <li><a href="#Menu=ChildMenu9" onclick="DoMenu('ChildMenu9')">星期日</a>
+			 <ul id="ChildMenu9" class="collapsed">
+			   <li><a href="javascript:;" onclick="reHtml(28,'lotno=F47104')">双色球</a></li>
+			   <li><a href="javascript:;" onclick="reHtml(28,'lotno=F47103')">福彩3D</a></li>
+			   <li><a href="javascript:;" onclick="reHtml(28,'lotno=T01002')">排列三</a></li>
+			  </ul>
+		 </li>
+		 </ul>
+	</div>
+	</div>
+	</div>
+	<div class="userbox" id="right_text"><script>forLotNo(28)</script></div>
+  </div>
+  <div id="footer"><!--#include virtual="/include/footer.html"--></div>
+</div>
+<script type="text/javascript">
+init();
+</script>
+</body>
+</html>

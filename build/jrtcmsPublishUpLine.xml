@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="upload.prod" name="jrtcms">
+	<property name="jrtcms.location" value="../../jrtcms" />
+	<property name="ECLIPSE_HOME" value="../../eclipse" />
+	<property name="debuglevel" value="source,lines,vars" />
+	<property name="target" value="1.6" />
+	<property name="source" value="1.6" />
+	<property environment="env" />
+
+	<property file="build.properties" />
+	<property file="publish.properties" />
+	<property name="full.version" value="${majorVersion}.${minorVersion}.${releaseNumber}.${build.number}" />
+
+	<path id="Web App Libraries.libraryclasspath">
+		<pathelement location="../WebContent/WEB-INF/lib/*"/>
+		<pathelement location="../WebContent/WEB-INF/classes" />
+	</path>
+
+	<path id="EAR Libraries.libraryclasspath"/>
+    <path id="Apache Tomcat v6.0 [Apache Tomcat v6.0].libraryclasspath">
+        <pathelement location="D:\tomcat6\lib\*"/>
+    </path>
+    <path id="jrtcms.classpath">
+        <path refid="Web App Libraries.libraryclasspath"/>
+        <path refid="EAR Libraries.libraryclasspath"/>
+        <path refid="Apache Tomcat v6.0 [Apache Tomcat v6.0].libraryclasspath"/>
+    </path>
+
+	<target name="init" depends="clean">
+		<mkdir dir="../build/classes" />
+		<copy includeemptydirs="false" todir="../build/classes">
+			<fileset dir="../src" excludes="**/*.launch, **/*.java" />
+		</copy>
+	</target>
+	<target name="clean">
+		<delete dir="../build/classes" />
+		<delete dir="../build/WebContent" />
+		
+	</target>
+
+
+	<property name="server-username" value="appusr" />
+	<property name="staging-server-password" value="Jinruantong@12" />
+	<property name="staging-server-address" value="219.148.162.73" />
+	<property name="staging-upload-dir" value="/usr/local/tomcat6/webapps/" />
+	<property name="upline" value="./upline" />
+	<property name="war-name" value="jrtcms.war" />
+
+
+	<target depends="init" name="build">
+			<echo message="${ant.project.name}: ${ant.file}" />
+			<javac debug="true" encoding="utf-8" debuglevel="${debuglevel}" destdir="../WebContent/WEB-INF/classes" source="${source}" target="${target}">
+				<src path="../src" />
+				<classpath refid="jrtcms.classpath" />
+			</javac>
+		</target>
+
+	<target name="upload.prod" description="编译打包-上传到运营环境">
+		<delete file="../build/upline/${war-name}" />
+		<delete file="MANIFEST.MF" />
+		
+		
+		<copy todir="../build/WebContent/">
+			<fileset dir="../WebContent" includes="**/*" />
+		</copy>
+		<copy todir="../build/WebContent/WEB-INF/classes">
+			<fileset dir="./../build/classes" includes="**/*" />
+		</copy>
+		<delete verbose="true" includeemptydirs="true">   
+		   <fileset dir="../build/WebContent/template">   
+		   <include name="**/*"/>   
+		</fileset>   
+		</delete>
+		<!--测试服务器的jrtcms打包，并备份 -->
+		<echo>copy Linux Service properties...</echo>
+		<copy overwrite="true" tofile="./../build/WebContent/WEB-INF/classes/jrtcms.properties" file="./upline/jrtcms.properties" />
+		<copy overwrite="true" tofile="./../build/WebContent/WEB-INF/classes/struts.properties" file="./upline/struts.properties" />
+		<copy overwrite="true" tofile="./../build/WebContent/WEB-INF/classes/jdbc.properties" file="./upline/jdbc.properties" />
+
+		<manifest file="MANIFEST.MF">
+			<!--attribute name="Built-By" value="${user.name}" /-->
+			<attribute name="jrtcmsSite-Version" value="${majorVersion}.${minorVersion}.${releaseNumber}.${build.number}" />
+		</manifest>
+		<war warfile="../build/upline/${war-name}" webxml="./WebContent/WEB-INF/web.xml" manifest="MANIFEST.MF">
+			<fileset dir="./../build/WebContent" />
+		</war>
+
+		<tstamp>
+			<format property="TODAY_CN" pattern="yyyyMMddHHmmss" locale="en,UK" />
+		</tstamp>
+
+		<echo>在前置机备份prod jrtcms.rar  ${staging}/${war-name} =》  ${prod}/${TODAY_CN}_${war-name} </echo>
+		<copy overwrite="true" tofile="${upline}/${TODAY_CN}_${war-name}" file="${upline}/${war-name}" />
+
+
+		<!--sshexec host="${staging-server-address}" trust="true"
+			username="${server-username}"
+			password="${staging-server-password}"
+		 	command="cd ${staging-upload-dir} &amp;&amp; rm -rf jrtcms ${war-name}" verbose="true" failonerror="false"/>
+
+		<sshexec host="${staging-server-address}" trust="true"
+					username="${server-username}"
+					password="${staging-server-password}"
+				 	command=". .bash_profile &amp;&amp; ps auxf|grep tomcat6/ |grep -v grep | awk '{printf &quot;kill -9 %s\n&quot;, $2}' |sh " verbose="true" failonerror="false" />
+
+
+		<property name="scp-con-prod" value="${server-username}:${staging-server-password}@${staging-server-address}:${staging-upload-dir}" />
+		<echo>上载staging ${staging}/${war-name}到运营系统</echo>
+		<scp file="${upline}/${war-name}" todir="${scp-con-prod}" trust="true" />
+
+
+		<sshexec host="${staging-server-address}" trust="true"
+					username="${server-username}"
+					password="${staging-server-password}"
+				 	command=". .bash_profile &amp;&amp; cd /usr/local/tomcat6/bin &amp;&amp; ./startup.sh " verbose="true" failonerror="false" /-->
+
+	</target>
+
+</project>

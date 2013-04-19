@@ -1,0 +1,10 @@
+MIDlet-Name: ruyicai
+MIDlet-Version: 2.0.0
+MIDlet-Vendor: JinRuanTong
+MIDlet-Jar-URL: ruyicai_V8.jar
+MIDlet-Jar-Size: 442281
+MIDlet-Description: ruyicai;App;Motorola V8
+MIDlet-Icon: /icon.png
+MIDlet-1: ruyicai,/icon.png,com.iApp
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0

@@ -1,0 +1,2 @@
+Motorola/A1200	zh_CN	ruyicai_A1210.jar	ruyicai_A1210.jad	-	240x320x18
+

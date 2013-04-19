@@ -1,0 +1,35 @@
+<!--#include virtual="/include/top_http.html"-->
+<title>庆合买上线 加奖返现 巨实惠</title>
+<link href="/css/util.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/util.js"></script>
+<script type="text/javascript" src="/js/jqueryJS/jquery-1.5.min.js"></script>
+</head>
+
+<body>
+<div class="huoDong">
+	<script>$(function toplogo(){
+		$.ajax({
+		    type: "get",
+		    url: "/chlw/function/cooperation/activity_coop_top.jsp?"+Math.random(),
+		    dataType: "html",
+		    success: function(msg){
+		    $("#activity").html(msg);
+		}
+		});
+	});</script>
+	<div class="huoDong_top" id="activity"></div>
+</div>
+<div class="huoDong_center">
+<table cellpadding="0" cellspacing="0">
+	<tr>
+		<td><img src="/images/jiaJiangFanXian01.jpg" width="950" height="373" /></td>
+	</tr>
+	<tr>
+		<td><img src="/images/jiaJiangFanXian02.jpg" width="950" height="263" /></td>
+	</tr>
+	<tr>
+		<td><img src="/images/jiaJiangFanXian03.jpg" width="950" height="271" /></td>
+	</tr>
+</table>
+</div>
+<!--#include virtual="/rules/setBody.html"-->

@@ -1,0 +1,26 @@
+$(function(){
+	$("#menubtn1").click(function(){
+		$("#shouji_box1").show();
+		$("#shouji_box2").hide();
+		$("#shouji_box3").hide();
+		$("#menubtn1").attr("src","images/168/btn_android_click.png");
+		$("#menubtn2").attr("src","images/168/btn_fucai_normal.png");
+		$("#menubtn3").attr("src","images/168/btn_ticai_normal.png");
+	});
+	$("#menubtn2").click(function(){
+		$("#shouji_box1").hide();
+		$("#shouji_box2").show();
+		$("#shouji_box3").hide();
+		$("#menubtn1").attr("src","images/168/btn_android_normal.png");
+		$("#menubtn2").attr("src","images/168/btn_fucai_click.png");
+		$("#menubtn3").attr("src","images/168/btn_ticai_normal.png");
+	});
+	$("#menubtn3").click(function(){
+		$("#shouji_box1").hide();
+		$("#shouji_box2").hide();
+		$("#shouji_box3").show();
+		$("#menubtn1").attr("src","images/168/btn_android_normal.png");
+		$("#menubtn2").attr("src","images/168/btn_fucai_normal.png");
+		$("#menubtn3").attr("src","images/168/btn_ticai_click.png");
+	});
+});

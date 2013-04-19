@@ -1,0 +1,188 @@
+<!--#include virtual="/include/top_http.html"-->
+<title>联系我们--如意彩</title>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">    
+<meta http-equiv="keywords" content="如意彩、联系我们">
+<meta http-equiv="description" content="如意彩、联系我们">
+
+<link href="/css/util.css" rel="stylesheet" type="text/css">
+<link href="/css/danyeAll.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/js/jqueryJS/jquery-1.5.min.js"></script>
+<style type="text/css">
+    html,body{margin:0;padding:0;}
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script> 
+</head>
+<body>
+<div id="body">
+   <div id="headerdanye">
+		<div class="danyehead">	
+          <div class="dylogo" >
+            <a href="/"><img src="/images/danyelogo.jpg" width="160" height="96" border="0" class="charupic"/></a>
+          </div>
+          <div class="fhsy" >
+           <a href="/">返回首页>></a>
+          </div> 
+        </div>
+			<img src="/images/danyebanner.jpg" width="950" class="charupic">
+	</div>
+    
+   <div id="main">
+   	<div id="zhanghu">
+  	<div class="main_left">
+  	<div class="bt"><img src="/images/danyetop.gif" width="190" height="29" border="0"></div>
+		<div id="PARENT">
+			<ul id="nav">
+			<li><a href="javascript:;"><span class="nochoose">关于我们</span></a>
+			 <ul id="ChildMenu1" class="expanded">
+			 <li ><a href="/rules/trans_Company.html" title="公司简介">公司简介</a></li>
+			 <li><a href="/rules/trans_Vision.html" title="公司愿景">公司愿景</a></li>
+			 <li><a href="/rules/trans_OperationPrinciple.html" title="经营理念">经营理念</a></li>
+			 <li><a href="/rules/trans_ITSM.html" title="总裁致辞">总裁致辞</a></li>
+             <li><a href="/rules/trans_OurAdvantage.html" title="我们的优势">我们的优势</a></li>
+			 </ul>
+			</li>
+			
+			<li><a href="/rules/Partnership.html" ><span class="nochoose">商务合作</span></a>
+			</li>
+			
+			<li><a href="/rules/Contact Us.html" ><span class="choose mousehover">联系我们</span></a>
+			</li>	
+            
+			<li><a href="javascript:;"><span class="nochoose">诚聘英才</span></a>
+			 <ul id="ChildMenu2" class="expanded">
+			 <li><a href="/rules/elite_CareeronTech.html" title="技术研发类">技术研发类</a></li>
+			 <li><a href="/rules/elite_Operations.html" title="产品运营类">产品运营类</a></li>
+             <!-- <li><a href="#" title="市场营销类">市场营销类</a></li> -->
+             <li><a href="/rules/elite_CustomerService.html" title="客户服务类">客户服务类</a></li>
+             <!-- <li><a href="#" title="内容编辑类">内容编辑类</a></li> -->
+             <li><a href="/rules/elite_FunctionSupport.html" title="职能支持类">职能支持类</a></li>
+			 </ul>
+			</li>
+			<li><a href="/rules/LegalStatement.html" ><span class="nochoose">法律声明</span></a>
+			</ul>
+	  </div>
+	</div>
+	<div class="userright">
+       <div class="zh_rightbg">
+          <div class="zh_rt">联系我们</div>
+              <div class="right_01">
+                    <p>
+                      公司名称：北京神谷数码科贸有限公司<br/>
+                      公司总机：010-62655160<br/>
+                      客服电话：400-665-1000<br/>
+                      邮政编码：100091 <br/>
+                      电子邮箱：<a href="mailto:service@ruyicai.com">service@ruyicai.com</a><br/>
+                      公司地址：北京市海淀区颐和园路福缘门甲1号汇缘阁
+                   </p>
+                   <p class="lxwmyc">
+                      <div style="width:697px;height:550px;border:#ccc solid 1px;" id="dituContent"></div>
+                   </p>
+               </div>
+        </div>
+	</div>
+  </div>
+</div>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(116.278762,39.944108);//定义一个中心点坐标
+        map.centerAndZoom(point,18);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //标注点数组
+    var markerArr = [{title:"北京神谷数码科贸有限公司",content:"北京神谷数码科贸有限公司",point:"116.279575|39.944198",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://openapi.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+    
+    initMap();//创建和初始化地图
+</script>
+   <!--#include virtual="/include/footer_litter.html" -->
+</div>
+<!--#include virtual="/rules/setBody.html"-->

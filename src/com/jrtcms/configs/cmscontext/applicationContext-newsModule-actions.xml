@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans   
+            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd  
+            http://www.springframework.org/schema/context  
+            http://www.springframework.org/schema/context/spring-context-2.5.xsd  
+            http://www.springframework.org/schema/aop  
+            http://www.springframework.org/schema/aop/spring-aop-2.5.xsd  
+            http://www.springframework.org/schema/tx  
+            http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	
+	<!-- ===================================新闻添加、修改、删除action========================================== -->
+	<bean name="news" class="com.jrtcms.web.action.NewsAction"  scope="prototype">
+		<property name="newsService" ref="newsService" />
+		<property name="newsChannelService" ref="newsChannelService"/>
+		<property name="newsCategoryService" ref="newsCategoryService"></property>
+		<property name="newsTemplateServince" ref="newsTemplateService"/>
+	</bean>
+	<!-- ===================================新闻查询action========================================== -->
+	<bean name="newsSearch" class="com.jrtcms.web.action.NewsAction" >
+		<property name="newsService" ref="newsService" />
+		<property name="newsChannelService" ref="newsChannelService"/>
+		<property name="newsTemplateServince" ref="newsTemplateService"/>
+	</bean>
+	
+	<!-- ===================================客户留言修改、删除action========================================== -->
+	<bean name="custom" class="com.jrtcms.web.action.CustomMessageAction"  scope="prototype">
+		<property name="customService" ref="customService" />
+	</bean>
+	<!-- ===================================客户留言查询action========================================== -->
+	<bean name="customSearch" class="com.jrtcms.web.action.CustomMessageAction" >
+		<property name="customService" ref="customService" />
+	</bean>
+	
+	<!-- ===================================自动生成分类编号测试action 结束========================================== -->
+	<bean name="newsCategory" class="com.jrtcms.web.action.NewsCategoryAction">
+		<property name="newsCategoryService" ref="newsCategoryService"></property>
+		<property name="newsTemplateService" ref="newsTemplateService"></property>
+	</bean>
+	<bean name="newsChannel" class="com.jrtcms.web.action.NewsChannelAction">
+		<property name="newsChannelService" ref="newsChannelService"></property>
+		<property name="newsTemplateService" ref="newsTemplateService"></property>
+	</bean>
+	<bean name="admin" class="com.jrtcms.web.action.AdminAction">
+		<property name="adminService" ref="adminService"></property>		
+	</bean>
+	<bean name="phoneInfo" class="com.jrtcms.web.action.PhoneInfoAction">
+		<property name="phoneInfoService" ref="phoneInfoService"></property>
+		<property name="newsService" ref="newsService"></property>			
+	</bean>
+	<bean name="newsInfo" class="com.jrtcms.web.action.NewsInfoAction" scope="prototype">
+		<property name="newsInfoService" ref="newsInfoService"></property>
+		<property name="newsChannelService" ref="newsChannelService"></property>
+		<property name="newTemplateServince" ref="newsTemplateService"></property>
+		<property name="newsCategoryServince" ref="newsCategoryService"></property>
+		<property name="channelTemplate" ref="channel_TemplateService"></property>
+			</bean>
+	<bean name="newsTemplate" class="com.jrtcms.web.action.NewsTemplateAction" >
+		<property name="newsTemplateService" ref="newsTemplateService"></property>
+		<property name="newsService" ref="newsService"></property>
+		<property name="channel_TemplateService" ref="channel_TemplateService"></property>
+		<property name="web_proService" ref="web_proService"></property>
+		<property name="newsChannelService" ref="newsChannelService"></property>
+		<property name="newsCategoryService" ref="newsCategoryService"></property>
+	</bean>
+	<bean name="webPro" class="com.jrtcms.web.action.WebProAction">
+		<property name="web_proService" ref="web_proService"></property>
+	</bean>
+	<bean name="SystemInit" class="com.jrtcms.listener.SystemInitStaticPropertys">
+		<property name="wpss" ref="web_proService"></property>
+		<property name="newsCategoryService" ref="newsCategoryService"></property>
+		<property name="newsChannelService" ref="newsChannelService"></property>
+	</bean>
+	<bean name="tools" class="com.jrtcms.web.action.ToolsAction" >
+		<property name="newsTemplateService" ref="newsTemplateService"></property>
+		<property name="newsService" ref="newsService"></property>
+		<property name="channel_TemplateService" ref="channel_TemplateService"></property>
+		<property name="web_proService" ref="web_proService"></property>
+		<property name="newsChannelService" ref="newsChannelService"></property>
+		<property name="newsCategoryService" ref="newsCategoryService"></property>
+		<property name="cp_drawalotteryService" ref="cp_drawalotteryService"></property>
+	</bean>
+	<bean name="webProCopy" class="com.jrtcms.web.action.WebProCopyAction" >
+		<property name="newsService" ref="newsService"></property>
+		<property name="web_proService" ref="web_proService"></property>
+		<property name="newsChannelService" ref="newsChannelService"></property>
+		<property name="newsCategoryService" ref="newsCategoryService"></property>
+	</bean>
+	<!-- ===================================词组添加、修改、查询action========================================== -->
+	<bean name="phraseLibrary" class="com.jrtcms.web.action.PhraseLibraryAction"  scope="prototype">
+		<property name="phraseLibraryService" ref="phraseLibraryService" />
+	</bean>
+	
+	<!-- ===================================对外接口的action ========================================== -->
+	<bean name="Interface" class="com.jrtcms.web.action.InterfaceAction" >
+		<property name="webService" ref="webService" />
+		<property name="salesService" ref="salesService" />
+		<property name="customService" ref="customService" />
+	</bean>
+	<bean id="webService" class="org.tempuri.WebServiceImpl" >
+		<property name="userName"  >
+			<value>J20062</value>
+		</property>
+		<property name="password" >
+			<value>220001</value>
+		</property>
+	</bean>
+	
+	
+	<!-- 抓取开奖查询注入 -->
+	<bean id="htmlCodeAction" class="com.jrtcms.web.action.HtmlCodeAction">
+		 <property name="cp_drawalotteryService" ref="cp_drawalotteryService"></property>
+	</bean>
+	<!-- 记录用户参与活动 -->
+	<bean id="activity" class="com.jrtcms.web.action.cooperation.ActivityAction">
+		 <property name="activityService" ref="activityService"></property>
+	</bean>
+	<!-- ===================================对外接口的action 结束========================================== -->
+</beans>

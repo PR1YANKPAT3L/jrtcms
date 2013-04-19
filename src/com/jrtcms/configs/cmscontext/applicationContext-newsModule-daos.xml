@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans   
+            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd  
+            http://www.springframework.org/schema/context  
+            http://www.springframework.org/schema/context/spring-context-2.5.xsd  
+            http://www.springframework.org/schema/aop  
+            http://www.springframework.org/schema/aop/spring-aop-2.5.xsd  
+            http://www.springframework.org/schema/tx  
+            http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	
+	<bean id="newsDAO"	class="com.jrtcms.web.dao.impl.NewsDAOImpl">
+		<property name="sqlMapClientTemplate" ref="sqlMapClientTemplate"></property>
+	</bean>
+	<bean id="newsCategoryDAO"
+		class="com.jrtcms.web.dao.impl.NewsCategoryDAOImpl">
+		<property name="sqlMapClientTemplate" ref="sqlMapClientTemplate"></property>
+	</bean>
+	<bean id="adminDAO"
+		class="com.jrtcms.web.dao.impl.AdminDAOImpl">
+		<property name="sqlMapClientTemplate" ref="sqlMapClientTemplate"></property>
+	</bean>
+	<bean id="phoneInfoDAO"
+		class="com.jrtcms.web.dao.impl.PhoneInfoDAOImpl">
+		<property name="sqlMapClientTemplate" ref="sqlMapClientTemplate"></property>
+	</bean>
+	<bean id="channel_TemplateDAO"
+		class="com.jrtcms.web.dao.impl.Channel_TemplateDAOImpl">
+		<property name="sqlMapClientTemplate" ref="sqlMapClientTemplate"></property>
+	</bean>
+	<bean id="newsChannelDAO"
+		class="com.jrtcms.web.dao.impl.NewsChannelDAOImpl">
+		<property name="sqlMapClientTemplate" ref="sqlMapClientTemplate"></property>
+	</bean>
+	<bean id="newsInfoDAO"
+		class="com.jrtcms.web.dao.impl.NewsInfoDAOImpl">
+		<property name="sqlMapClientTemplate" ref="sqlMapClientTemplate"></property>
+	</bean>
+	<bean id="newsTemplateDAO"
+		class="com.jrtcms.web.dao.impl.NewsTemplateDAOImpl">
+		<property name="sqlMapClientTemplate" ref="sqlMapClientTemplate"></property>
+	</bean>
+	<bean id="web_proDAO"
+		class="com.jrtcms.web.dao.impl.Website_PropertiesDAOImpl">
+		<property name="sqlMapClientTemplate" ref="sqlMapClientTemplate"></property>
+	</bean>
+	<bean id="phraseLibraryDAO"
+		class="com.jrtcms.web.dao.impl.PhraseLibraryDAOImpl">
+		<property name="sqlMapClientTemplate" ref="sqlMapClientTemplate"></property>
+	</bean>
+	<!-- #######对外接口###### -->
+	<!-- 抓取开奖查询注入 -->
+	<bean id="cp_drawalotteryDAO" class="com.jrtcms.web.dao.impl.CP_DrawalotteryDAOImpl">
+	      <property name="sqlMapClientTemplate" ref="sqlMapClientTemplate"></property>
+	</bean>
+	<bean id="activityDAO" class="com.jrtcms.web.dao.impl.ActivityDAOImpl">
+	      <property name="sqlMapClientTemplate" ref="sqlMapClientTemplate"></property>
+	</bean>
+	<bean id="salesDAO" class="com.jrtcms.web.dao.impl.SalesDAOImpl">
+	      <property name="sqlMapClientTemplate" ref="sqlMapClientTemplate"></property>
+	</bean>
+	<bean id="customDAO" class="com.jrtcms.web.dao.impl.CustomDaoImpl">
+	      <property name="sqlMapClientTemplate" ref="sqlMapClientTemplate"></property>
+	</bean>
+	<!-- #######对外接口######END -->
+</beans>

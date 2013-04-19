@@ -1,0 +1,25 @@
+<!--#include virtual="/include/top_http.html"-->
+</head>
+<link href="/css/util.css" rel="stylesheet" type="text/css"/>
+<link href="/css/tuserAll.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="/js/jqueryJS/jquery-1.5.min.js"></script>
+<script type="text/javascript" src="/js/kuaiTouZhou.js"></script>
+<body>
+	<div id="body">
+	<!--#include virtual="/include/top_nav.html"-->
+	<div id="main">
+	<div id="right_text">
+	<script>
+		var a= GetQueryString("a");
+		if(a != null && Number(a) == 1){
+			getMoreObjForNameAndValueToKey(59); //合买
+		}else{
+			getMoreObjForNameAndValueToKey(47);
+		}
+	</script>
+	</div>
+	</div>
+	<!--#include virtual="/include/footer_noindex.html" -->
+
+</div>
+<!--#include virtual="/rules/setBody.html"-->

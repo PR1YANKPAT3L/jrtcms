@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="Activity">
+	<resultMap class="com.jrtcms.web.pojo.Activity" id="Activity">
+		<!--系统管理员 映射 -->
+		<result column="userno" jdbcType="CHAR" property="userNo" />
+		<result column="iskey" jdbcType="VARCHAR" property="isKey" />
+		<result column="intime" jdbcType="TIMESTAMP" property="inTime" />
+		<result column="reward" jdbcType="BIGINT" property="reward" />
+		<result column="type" jdbcType="VARCHAR" property="type" />
+	</resultMap>
+	
+	
+	<insert id="insertActivity" parameterClass="com.jrtcms.web.pojo.Activity">
+		INSERT INTO cp_activity(userno,iskey,intime,reward,type)
+		VALUES(	#userNo#,#isKey#,now(),#reward#,#type#)
+	</insert>
+	 <select id="selectCount" resultClass="java.lang.Integer" parameterClass="com.jrtcms.web.pojo.Activity">
+	SELECT 	count(1)  FROM cp_activity
+	WHERE userno=#userNo#
+   	 <dynamic >
+   		<isNotNull prepend="AND" property="isKey"> iskey=#isKey# </isNotNull>
+   		<isNotNull prepend="AND" property="type"> type=#type# </isNotNull>
+	</dynamic>
+	</select>
+</sqlMap>

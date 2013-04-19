@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="Admin">
+	<resultMap class="com.jrtcms.web.pojo.Admin" id="Admin">
+		<!--系统管理员 映射 -->
+		<result column="login_id" jdbcType="BIGINT" property="login_id" />
+		<result column="login_name" jdbcType="VARCHAR" property="login_name" />
+		<result column="login_password" jdbcType="VARCHAR" property="login_password" />
+		<result column="role_id" jdbcType="INTEGER" property="role_id" />
+		<result column="description" jdbcType="VARCHAR" property="description" />
+		<result column="login_time" jdbcType="DATETIME" property="login_time" />
+	</resultMap>
+	<select id="ibatorgenerated_selectByPrimaryKey" parameterClass="com.jrtcms.web.pojo.Admin"
+		resultMap="Admin">
+		<!--按id查询 系统用户对象 -->
+		select *
+		from Admin
+		where login_id = #login_id:BIGINT#
+	</select>
+	<select id="selectAdmin" parameterClass="java.util.HashMap"	resultMap="Admin">
+		select * from Admin
+		where login_name = #login_name#
+		and login_password = #login_password#
+	</select>
+	<select id="selectAdminByName" parameterClass="java.lang.String"
+		resultMap="Admin">
+		select *
+		from Admin
+		where login_name = #login_name# 
+  </select>
+	<update id="updatePwd" parameterClass="java.util.HashMap">
+		update Admin set
+		login_password=#login_password# where login_id =
+		#login_id#
+  </update>
+	<insert id="insertAdmin" parameterClass="com.jrtcms.web.pojo.Admin">
+		insert into Admin
+		(login_name,login_password,role_id,description,login_time)
+		values(#login_name#,#login_password#,#role_id#,#description#,#login_time#)
+	</insert>
+</sqlMap>

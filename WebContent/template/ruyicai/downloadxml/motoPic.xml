@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mobilephonePic>
+<brand id="moto">
+<!-- ruyicai_V8.jar -->
+<data product="motoZ6" img="../img/moto/motoZ6.gif" title="motoZ6" url="web/getclienttemp.jsp?path=V8&amp;name=ruyicai_V8.jar" />
+<data product="motoV8" img="../img/moto/motoV8.gif" title="motoV8" url="web/getclienttemp.jsp?path=V8&amp;name=ruyicai_V8.jar" />
+<data product="motoV82GB" img="../img/moto/motoV82GB.gif" title="motoV82GB" url="web/getclienttemp.jsp?path=V8&amp;name=ruyicai_V8.jar" />
+<data product="motoRAZAV8" img="../img/moto/motoRAZA V8.gif" title="motoRAZR V8" url="web/getclienttemp.jsp?path=V8&amp;name=ruyicai_V8.jar" />
+<data product="motoRAZAV82GB" img="../img/moto/motoRAZA V8 2GB.gif" title="motoRAZR V8 2GB" url="web/getclienttemp.jsp?path=V8&amp;name=ruyicai_V8.jar" />
+
+<!--ruyicai_A1210.jar  -->
+<data product="motoA1210" img="../img/moto/motoA1210.gif" title="motoA1210" url="web/getclienttemp.jsp?path=A1210&amp;name=ruyicai_A1210.jar" />
+
+<!--ruyicai_A1200.jar  -->
+<data product="motoA1200e" img="../img/moto/motoA1200e.gif" title="motoA1200e" url="web/getclienttemp.jsp?path=A1200&amp;name=ruyicai_A1200.jar" />
+<data product="motoA1200" img="../img/moto/motoA1200.gif" title="motoA1200" url="web/getclienttemp.jsp?path=A1200&amp;name=ruyicai_A1200.jar" />
+<data product="motoROKRE6" img="../img/moto/motoROKRE6.gif" title="motoROKRE6" url="web/getclienttemp.jsp?path=A1200&amp;name=ruyicai_A1200.jar" />
+<data product="motoA1600" img="../img/moto/motoA1600.gif" title="motoA1600" url="web/getclienttemp.jsp?path=A1200&amp;name=ruyicai_A1200.jar" />
+<data product="motoE6e" img="../img/moto/motoE6e.gif" title="motoE6e" url="web/getclienttemp.jsp?path=A1200&amp;name=ruyicai_A1200.jar" />
+<data product="motoA810" img="../img/moto/motoA810.gif" title="motoA810" url="web/getclienttemp.jsp?path=A1200&amp;name=ruyicai_A1200.jar" />
+<data product="motoE680" img="../img/moto/motoE680.gif" title="motoE680" url="web/getclienttemp.jsp?path=A1200&amp;name=ruyicai_A1200.jar" />
+<data product="motoE680g" img="../img/moto/motoE680g.gif" title="motoE680g" url="web/getclienttemp.jsp?path=A1200&amp;name=ruyicai_A1200.jar" />
+<data product="motoE680i" img="../img/moto/motoE680i.gif" title="motoE680i" url="web/getclienttemp.jsp?path=A1200&amp;name=ruyicai_A1200.jar" />
+<data product="motoA780" img="../img/moto/motoA780.gif" title="motoA780" url="web/getclienttemp.jsp?path=A1200&amp;name=ruyicai_A1200.jar" />
+<data product="motoA768i" img="../img/moto/motoA768i.gif" title="motoA768i" url="web/getclienttemp.jsp?path=A1200&amp;name=ruyicai_A1200.jar" />
+<data product="motoA768" img="../img/moto/motoA768.gif" title="motoA768" url="web/getclienttemp.jsp?path=A1200&amp;name=ruyicai_A1200.jar" />
+<data product="motoA760" img="../img/moto/motoA760.gif" title="motoA760" url="web/getclienttemp.jsp?path=A1200&amp;name=ruyicai_A1200.jar" />
+<data product="motoA760i" img="../img/moto/motoA760i.gif" title="motoA760i" url="web/getclienttemp.jsp?path=A1200&amp;name=ruyicai_A1200.jar" />
+<data product="motoA728" img="../img/moto/motoA728.gif" title="motoA728" url="web/getclienttemp.jsp?path=A1200&amp;name=ruyicai_A1200.jar" />
+<data product="屏幕240*320" img="../img/moto/motow240h320.gif" title="屏幕240*320" url="web/getclienttemp.jsp?path=N73&amp;name=ruyicai_N73.jar" />
+</brand>
+</mobilephonePic>

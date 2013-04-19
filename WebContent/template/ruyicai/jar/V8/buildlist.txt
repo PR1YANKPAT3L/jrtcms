@@ -1,0 +1,2 @@
+Motorola/MotoRazr2V8	zh_CN	ruyicai_V8.jar	ruyicai_V8.jad	-	240x320x18
+

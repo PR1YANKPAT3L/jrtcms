@@ -1,0 +1,1 @@
+那个查询投注的已经上预上线.....查询单张票的接口是  http://219.148.162.70:9080/lottery/tlottcs/getTlottcByFlowno?flowno=NM00000000120541&type=0   差数是：flowno 和type（0：查询福彩 1：查询体彩）

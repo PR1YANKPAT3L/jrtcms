@@ -1,0 +1,24 @@
+FLOWNO	VARCHAR2(16 CHAR)	N			追号、套餐彩票的交易流水号，记录在账务日志记录表里的交易流水号，用来检索查询
+USERNO	VARCHAR2(8 CHAR)	N			客户编号
+LOTNO	VARCHAR2(6 CHAR)	N	' '		彩种编号
+AGENTNO	VARCHAR2(6 CHAR)	N	' '		分销渠道编号，分销渠道，如没有则为金软通本部，即000001
+BATCHNUM	NUMBER(5)	N	0		彩票购买期数
+LASTNUM	NUMBER(5)	N	0		剩余购买期数，彩票购买期数-已经购买的期数
+BEGINBATCH	VARCHAR2(15 CHAR)	N	' '		开始投注的彩票期号
+LASTBATCH	VARCHAR2(15 CHAR)	N	' '		上次投注的彩票期号，如果开始投注的彩票期号晚于当前的彩票期号，则记录当前的彩票期号
+BETNUM	NUMBER(9)	N	0		彩票注数
+DRAWWAY	NUMBER(5)	N	0		投注方式，（0-单式，1-复式，2-胆拖）
+SELLWAY	NUMBER(5)	N	0		销售方式，（0-自选，1-手选，2-机选）
+BETCODE	VARCHAR2(120 CHAR)	N	' '		彩票注码
+AMOUNT	NUMBER(12)	N	0		单次投注金额
+TOTALAMT	NUMBER(12)	N	0		"剩余投注总金额，总金额=剩余投注总金额+单次投注金额×彩票购买期数 剩余投注总金额=单次投注金额×剩余购买期数
+"
+ORDERTIME	TIMESTAMP(6)	N	to_timestamp('1000-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS')		上次系统投注时间，YYYYMMDDHHMMSS
+MAC	VARCHAR2(64 CHAR)	N	' '		敏感数据控制块，采用HASH/MD5算法加密全表字段，作为认证用
+TYPE	NUMBER(5)	N	0		追号套餐类型，0：追号，1：套餐
+STATE	NUMBER(5)	N	0		套餐状态，0：正常，1：暂停，2：注销
+ENDTIME	TIMESTAMP(6)	Y	to_timestamp('1000-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS')		追号注销时间，YYYYMMDDHHMMSS
+
+
+
+查询追号新接口： http://219.148.162.70:8000/jrtLot/newAddNumberQuery/addNumQuery           参数：开始时间（startTime）结束时间：（endTime）   查询开始记录：（startLine）结束记录（endLine）

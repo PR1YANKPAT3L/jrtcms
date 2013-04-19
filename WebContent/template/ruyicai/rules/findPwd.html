@@ -1,0 +1,97 @@
+<!--#include virtual="/include/top_http.html"-->
+<title>如意彩会员找回密码，可通过手机号或邮箱找回密码</title>
+<meta http-equiv="keywords" content="如意彩会员，找回密码，手机号找回密码，邮箱找回密码"/>
+<meta http-equiv="description" content="如意彩会员找回密码功能让您不再为丢失密码而烦恼！"/>
+<link rel="stylesheet" type="text/css" href="/css/util.css" />
+<link rel="stylesheet" type="text/css" href="/css/ruserAll.css" />
+<link type="text/css" rel="stylesheet" href="/css/validator.css"></link>
+<script type="text/javascript" src="/js/jqueryJS/jquery-1.5.min.js"></script>
+<script type="text/javascript" src="/js/jqueryJS/new_formValidator.js" ></script>
+<script type="text/javascript" src="/js/findPwd.js"></script>
+<script type="text/javascript">
+$(function(){
+	focuns("inputMobile");
+	$.formValidator.initConfig({formid:"findPwdForm",onError:function(){alert("校验没有通过，具体错误请看错误提示。")}}),
+		 $("#inputMobile").formValidator({
+				onshow : "请输入您用户名！",
+				onfocus : "请输入您用户名，不可为空！",
+				oncorrect : "恭喜！您输入的用户名是正确的！"
+			}).inputValidator({
+				min : 6,
+				max : 30,
+				onerror : "你输入的用户名长度非法，请确认！"
+			})
+	})	 
+</script>
+</head>
+<body>
+<div class="rusertop">
+	<div class="ruserlogo"><a href="/index.html" title="首页"><img src="/images/logony.gif" width="152" height="75" /></a></div>
+	<div class="rline"><a href="/index.html" title="首页">首页</a>|<a href="/rules/customesService.html" title="在线客服">在线客服</a></div>
+</div>
+<div id="body" >
+	<div class="rusercontent" style="height:400px;">
+		<div class="biaoti1"><img src="/images/mimalogo.gif"/></div>
+		<div class="mimanav">
+			<div class="nav_left"></div>
+			<div class="nav_mid">
+				<ul>
+					<li class="mimahover">1.填写如意彩用户名</li>
+					<li class="mimalist">2.选择密码找回方式</li>
+					<li class="mimalist">3.安全验证</li>
+					<li class="mimalist">4.重设密码</li>
+				</ul>
+			</div>
+			<div class="nav_right"></div>
+		</div>
+		<div class="rusercont" style="margin-top:10px;">
+		<form action="#" id="findPwdForm" >
+			<div class="yonghuming">请输入需要找回的用户名</div>
+			<div class="yonghuming1"><span class="repass_name">用户名：</span><span><input  class="input_l repass_input" name="userName" id="inputMobile" type="text"  onfocus="change('findimg')" onblur="findpwdValidator();"/></span><span id="inputMobileTip" class="onShow repass_name" style="margin-top:10px;"></span></div>
+			<div class="yonghuming1"><span>验证码：</span><span><input class="mimainput"  type="text" name="pssRank" /></span><span><img  id="findimg" class="yanzhengs" src="/chlw/function/common/image.jsp?id=260.48305424745194614" /></span><a href="javaScript:change('findimg');" title="看不清，换一张"><span class="blue1">看不清，换一张</span></a></div>
+			<div style="float:left; overflow:hidden; padding:10px 0px 0px 168px;"><input class="tijiaobtn1" style="margin:0px;" id="findButton" name="" type="button" value="" onclick="jumpUrl('0')"/></div>
+		</form>
+		</div>
+  </div>
+</div>
+<div id="footer">
+	  <!--#include virtual="/include/footer_noindex.html" -->
+</div>
+<input type="hidden" value="" name="tishi" id="tishi"> 
+<div id="login_pop" class="WindowCenter" style="display:none;" ></div>
+<div class="BodyBG">&#160;</div>
+<div class="AlertWindow KillNumberAlert WindowCenter" id="Shouye_Alert" style="display:none">
+	<table>
+		<tr>
+			<th class="ConnerLeft">&#160;</th>
+			<th class="WindowTittle"><h3>温馨提示</h3><span class="BaseBtn" onclick='loginShow("Shouye_Alert",false);'>&#160;</span></th>
+			<th class="ConnerRight">&#160;</th>
+		</tr>
+	</table>
+	<div class="OutsideBorder">
+		<div class="InsideBorder">
+			<table class="KillNumberAlertTable">
+					<tr>
+						<th width="80"></th><td id="AlertMsg"></td>
+					</tr>
+					<tr>
+						<td colspan="2">&#160;</td>
+					</tr>
+					<tr>
+						<td colspan="2">&#160;</td>
+					</tr>
+					<tr>
+						<th colspan="2"><input type="button" value="确　定" class="BaseBtn"  onclick='loginShow("Shouye_Alert",false);'/></th>
+					</tr>
+			</table>
+
+		</div>
+	</div>
+</div>
+<div style="display: none">
+<script type="text/javascript">
+	var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8333ff4357591825f74461a26584cc2f' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</div>

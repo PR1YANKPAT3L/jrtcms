@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="CP_Drawalottery">
+	<resultMap class="com.jrtcms.web.pojo.CP_Drawalottery" id="ibatorgenerated_BaseResultMap">
+	     <result column="id" jdbcType="BIGINT" property="id" />
+	     <result column="lotno" jdbcType="VARCHAR" property="lotno" />
+	     <result column="batchcode" jdbcType="VARCHAR" property="batchcode" />
+	     <result column="lotteryTime" jdbcType="VARCHAR" property="lotteryTime" />
+	     <result column="lotteryCode" jdbcType="VARCHAR" property="lotteryCode" />
+	     <result column="betTotalMoney" jdbcType="BIGINT" property="betTotalMoney" />
+	     <result column="progressive" jdbcType="VARCHAR" property="progressive" />
+	     <result column="prizeInfo" jdbcType="VARCHAR" property="prizeInfo" />
+	</resultMap>
+	
+	<!-- 插入 开奖记录-->
+   <insert id="ibatorgenerated_insert" parameterClass="com.jrtcms.web.pojo.CP_Drawalottery">
+    insert into webcms.cp_drawalottery(lotno,batchcode,lotteryTime,lotteryCode,betTotalMoney,progressive,prizeInfo)
+    values (#lotno:VARCHAR#, #batchcode:VARCHAR#, #lotteryTime:VARCHAR#, #lotteryCode:VARCHAR#,
+    #betTotalMoney:VARCHAR#, #progressive:VARCHAR#, #prizeInfo:VARCHAR#)
+   </insert>
+   
+   <insert id="ibatorgenerated_insertSelective" parameterClass="com.jrtcms.web.pojo.CP_Drawalottery">
+    insert into cp_drawalottery
+    <dynamic prepend="(">
+      <isNotNull prepend="," property="lotno">lotno</isNotNull>
+      <isNotNull prepend="," property="batchcode">batchcode</isNotNull>
+      <isNotNull prepend="," property="lotteryTime">lotteryTime</isNotNull>
+      <isNotNull prepend="," property="lotteryCode">lotteryCode</isNotNull>
+      <isNotNull prepend="," property="betTotalMoney">betTotalMoney</isNotNull>
+      <isNotNull prepend="," property="progressive">progressive</isNotNull>
+      <isNotNull prepend="," property="prizeInfo">prizeInfo</isNotNull>
+      )
+    </dynamic>
+    values
+    <dynamic prepend="(">
+      <isNotNull prepend="," property="lotno">#lotno:VARCHAR#</isNotNull>
+      <isNotNull prepend="," property="batchcode">#batchcode:VARCHAR#</isNotNull>
+      <isNotNull prepend="," property="lotteryTime">#lotteryTime:VARCHAR#</isNotNull>
+      <isNotNull prepend="," property="lotteryCode">#lotteryCode:VARCHAR#</isNotNull>
+      <isNotNull prepend="," property="betTotalMoney">#betTotalMoney:VARCHAR#</isNotNull>
+      <isNotNull prepend="," property="progressive">#progressive:VARCHAR#</isNotNull>
+      <isNotNull prepend="," property="prizeInfo">#prizeInfo:VARCHAR#</isNotNull>
+      )
+    </dynamic>
+  </insert>
+  
+  <!-- 根据彩种 和期号查询开奖信息-->
+  <select id="selectDrawalottery" parameterClass="com.jrtcms.web.pojo.CP_Drawalottery" resultClass="com.jrtcms.web.pojo.CP_Drawalottery">
+     select * from cp_drawalottery where lotno=#lotno:VARCHAR#
+	<dynamic>
+		<isNotNull prepend="AND" property="batchcode">
+			batchcode=#batchcode:VARCHAR#
+		</isNotNull>
+		order by batchcode desc
+		limit 0,1
+	</dynamic>
+  </select>
+  <!-- 根据彩种查询期号-->
+  <select id="selectAllBatchcodeByLotno" parameterClass="com.jrtcms.web.pojo.CP_Drawalottery" resultClass="com.jrtcms.web.pojo.CP_Drawalottery">
+     select cp.batchcode from cp_drawalottery as cp where lotno=#lotno:VARCHAR# order by batchcode desc
+  </select>
+   <!-- 根据时间查询 彩种和期号拼接-->
+   <select id="selectByDate" parameterClass="com.jrtcms.web.pojo.CP_Drawalottery" resultClass="com.jrtcms.web.pojo.CP_Drawalottery">
+     select CONCAT(cp.lotno,"_",cp.batchcode) as lotno from cp_drawalottery as cp WHERE cp.lotteryTime like '$lotteryTime$%'
+  </select>
+   <!-- 根据时间查询开奖信息-->
+   <select id="selectAllByDate" parameterClass="com.jrtcms.web.pojo.CP_Drawalottery" resultClass="com.jrtcms.web.pojo.CP_Drawalottery">
+     select * from cp_drawalottery as cp 
+  </select>
+   <!-- 根据时间删除记录-->
+  <delete id="deleteLottery" parameterClass="com.jrtcms.web.pojo.CP_Drawalottery">
+		DELETE FROM cp_drawalottery WHERE lotteryTime like '$lotteryTime$%'
+	</delete>
+	<!-- 根据id记录-->
+  <delete id="deleteLotteryByID" parameterClass="com.jrtcms.web.pojo.CP_Drawalottery">
+		DELETE FROM cp_drawalottery WHERE id=#id#
+	</delete>
+</sqlMap>

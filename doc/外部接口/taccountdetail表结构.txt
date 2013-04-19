@@ -1,0 +1,19 @@
+Name             Type              Nullable Default                                                      Comments              
+---------------- ----------------- -------- ------------------------------------------------------------ --------------------- 
+ID               VARCHAR2(16 CHAR)          ' '                                                          账户明细标识          
+PLATTIME         TIMESTAMP(6)               to_timestamp('1000-01-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS') 账户明细记录时间      
+AMT              NUMBER(12)                 0                                                            变动金额，单位：分    
+DRAWAMT          NUMBER(12)                 0                                                            可提现变动金额，单位：分 
+BLSIGN           NUMBER(5)                  0                                                            -1：出帐，1：进账     
+MEMO             VARCHAR2(64 CHAR)          ' '                                                          账户科目明细描述      
+BALANCE          NUMBER(12)                 0                                                            余额，变动后余额，单位：分 
+TACCOUNTTYPE     NUMBER(5)                  0                                                            账户类型              
+TTRANSACTIONID   VARCHAR2(32 CHAR)          ' '                                                          交易标识              
+TTRANSACTIONTYPE NUMBER(5)                  0                                                            交易类型              
+MOBILEID         VARCHAR2(11 CHAR)          ' '                                                          用户标识              
+USERNO           VARCHAR2(8 CHAR)           ' '                                                          账户标识              
+DRAWBALANCE      NUMBER(12)                 0                                                            余额，变动后可提现余额，单位：分 
+MAC              VARCHAR2(64 CHAR)          ' '                                                          校验串                
+STATE            NUMBER(5)         Y        0                                                            交易状态：0失败 1成功 
+FREEZEAMT        NUMBER(12)                 0                                                            冻结变动金额,单位：分，默认为0 
+FREEZEBALANCE    NUMBER(12)                 0                                                            余额，变动后的冻结金额,单位：分，默认为0 

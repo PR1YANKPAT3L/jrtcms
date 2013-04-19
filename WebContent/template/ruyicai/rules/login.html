@@ -1,0 +1,64 @@
+<!--#include virtual="/include/top_http.html"-->
+<title>如意彩会员登录，您可以使用QQ、支付宝快捷登陆</title>
+<meta http-equiv="keywords" content="会员登录，QQ、支付宝快捷登陆"/>
+<meta http-equiv="description" content="如意彩会员快捷登录使用QQ、支付宝登陆让您购彩更快捷！"/>
+<link type="text/css" href="/css/util.css" rel="stylesheet"/>
+<link type="text/css" href="/css/ruserAll.css" rel="stylesheet"/>
+<script type="text/javascript" src="/js/jqueryJS/jquery-1.5.min.js" ></script>
+<script type="text/javascript" src="/js/jqueryJS/new_formValidator.js" ></script>
+<script type="text/javascript" src="/js/register_login.js"></script>
+</head>
+<body>
+<div id="indexLogin">
+  <div id="login_body">
+	<!--#include virtual="/rules/new_top.html"-->
+	<div class="user_loginTitle">用户登录</div>
+	<div class="user_loginContent">
+		<form action="" method="post" id="userLoginForm" name="userLoginForm" >
+		<input id="reqUrl" type="hidden" value="" name="reqUrl">
+		<table  cellspacing="0" cellpadding="0" >
+			<tr>
+				<th width="60">用户名：</th>
+				<th colspan="2" width="170"><input name="tuserinfo.USERNAME" id="username" type="text" tabindex="1" class="loginInput" /></th>
+				<td width="230" id="usernameTip"></td>
+			</tr>
+			<tr>
+				<th>密　码：</th>
+				<th colspan="2" ><input name="tuserinfo.PASSWORD"  id="pwd" type="password" tabindex="2" class="loginInput" onKeyDown="if (event.keyCode==13)loginIndex();"/></th>
+				<td id="pwdTip"></td>
+			</tr>
+			<tr id="rank_id" style="display:none">
+				<th>验证码：</th>
+				<th><input id="password1" name="password1" type="text" class="login_inputSmall"/></th>
+				<td><img src="/chlw/function/common/image.jsp" id="magLogin" width="60" height="20" class="login_img" /></td>
+				<td><a href="javascript:change('magLogin');" title="换一张">换一张</a><input type="hidden"  value="0" id="rank_value" name="rank_value"></td>
+			</tr>
+			<tr>
+				<td colspan="4"><input id="login_submit" onclick="loginIndex()" type="button" value="登录" class="login_inpuBtn" />
+				<a href="/rules/findPwd_new.html" title="忘记密码">忘记密码?</a></td>
+			</tr>
+		</table>
+		</form>
+		<div class="user_loginRight">
+			<h2>还不是如意彩用户？</h2>
+			<p>现在免费注册成为如意彩用户，便能立刻享受便捷的购彩服务。</p>
+			<div class="login_footerLine"><a href="http://users.ruyicai.com/register/register_new.jsp" class="login_registration">注册新用户</a></div>
+			<div class="space15">&#160;</div>
+			<p>使用合作网站账号登录如意彩：</p>
+			<p><a href="javascript:void(qqUnitedLogin())" title="QQ" class="login_QQ">QQ</a><a href="javascript:void(zfbLogin())" title="支付宝" class="login_zhiFuBao">支付宝</a></p>
+		</div>
+	</div>
+	<!--#include virtual="/include/footer_litter.html"-->
+</div>
+<input type="hidden" value="" name="tishi" id="tishi"> 
+</div>
+<script>
+
+function focuns(){
+if($("#username").val()!=""||$("#username").val()!=null){
+   $("#username").focus();
+}
+}
+focuns();loginFormValidator();
+</script>
+<!--#include virtual="/rules/setBody.html"-->

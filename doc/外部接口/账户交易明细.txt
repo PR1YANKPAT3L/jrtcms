@@ -1,0 +1,1 @@
+/taccountdetails参数：get=Taccountdetailjsonuserno 用户编号beginTime 开始时间，longendTime 结束时间，long，可以不填，默认当前pageIndex 当前页面， 从0开始， 0为第1页maxResult 记录数

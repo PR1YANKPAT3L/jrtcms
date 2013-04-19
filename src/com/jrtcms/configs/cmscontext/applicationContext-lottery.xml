@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans   
+            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd  
+            http://www.springframework.org/schema/context  
+            http://www.springframework.org/schema/context/spring-context-2.5.xsd  
+            http://www.springframework.org/schema/aop  
+            http://www.springframework.org/schema/aop/spring-aop-2.5.xsd  
+            http://www.springframework.org/schema/tx  
+            http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	
+	<!-- ===================================自动生成HTML定时器 开始========================================== -->
+	<bean id="jspTohtml1" class="util.JspToHtml_Job">
+	<property name="sqlMapClientTemplate" ref="sqlMapClientTemplate"></property>
+	</bean>
+	
+	<bean id="jspTohtmltask1" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">            
+		  <property name="targetObject" ref="jspTohtml1"/>       
+	      <property name="targetMethod" value="jspToHtmllottery" /> 
+	  </bean> 
+	  <bean id="jspTohtmltask2" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">            
+		  <property name="targetObject" ref="jspTohtml1"/>       
+	      <property name="targetMethod" value="jspToHtmllotteryG" /> 
+	  </bean> 
+	 
+	  <bean id="doTime2" class="org.springframework.scheduling.quartz.CronTriggerBean">      
+		         <property name="jobDetail" ref="jspTohtmltask1"/>          
+	         	 <property name="cronExpression" value="0 */1 * * * ?"/> 
+	  </bean> 
+	  <bean id="doTime3" class="org.springframework.scheduling.quartz.CronTriggerBean">      
+		         <property name="jobDetail" ref="jspTohtmltask2"/>          
+	         	 <property name="cronExpression" value="0 0 */1 * * ?"/> 
+	  </bean> 
+	  <bean lazy-init="false" autowire="no" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+	               <property name="triggers">        
+			           <list>                 
+			              	 <ref bean="doTime2"/> 
+			              	 <ref bean="doTime3"/> 
+			           </list>            
+	               </property>         
+	  </bean>
+<!-- ===================================自动生成HTML定时器 结束========================================== -->
+</beans>

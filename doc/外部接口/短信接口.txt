@@ -1,0 +1,3 @@
+http://219.148.162.70:9080/lottery/sms/send     （POST提交）
+mobileIds 手机号
+text 发送短信的内容

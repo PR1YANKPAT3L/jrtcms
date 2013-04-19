@@ -1,0 +1,1 @@
+/allSelect.do?lotterySelectByParam    lotNo 彩种，batchCood期号 查询开奖
